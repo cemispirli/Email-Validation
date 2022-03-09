@@ -1,11 +1,10 @@
 let eMail = document.getElementById("mail");
 
 eMail.addEventListener("change",(event) => {
-    if (eMail.value.includes("@") && (eMail.value.includes(".com")) || (eMail.value.includes(".co"))) {
-        document.write("Valid");
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(eMail.value)) {
+        alert("You have entered an valid email address :)");
     } else {
-        document.write("Unvalid");
+        alert("You have entered an invalid email address!");
     }
 })
 
-// && (eMail.value.includes(`.$$$`))
